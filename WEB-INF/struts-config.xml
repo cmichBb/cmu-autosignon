@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC
+  "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+  "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+  <global-forwards>
+    <!-- SETTINGS UI COMPONENTS, DO NOT CHANGE UNLESS YOU KNOW WHAT YOU ARE DOING -->
+      <forward name="accessDenied" 	path="/access_denied.jsp"	redirect="false"/>
+    </global-forwards>
+
+
+  <action-mappings>
+
+    <!-- SETTINGS UI COMPONENTS, DO NOT CHANGE UNLESS YOU KNOW WHAT YOU ARE DOING -->
+    <action path="/settings"
+        type="com.blackboard.gs.settings.struts.actions.SettingsAction"
+        scope="request"
+        parameter="loadSettings">
+        <forward name="view" path="/WEB-INF/jsp/settings.jsp"/>
+    </action>
+    <action path="/storeSettings"
+        type="com.blackboard.gs.settings.struts.actions.SettingsAction"
+        scope="request"
+        parameter="storeSettings">
+        <forward name="view" path="/settings.do"/>
+    </action>
+
+    <!-- SSO URL -->
+    <action path="/autoSignon"
+        type="com.blackboard.gs.autosignon.struts.actions.AutoSignonAction"
+        scope="request"
+        parameter="autoSignon">
+    </action>
+
+    <!-- COURSE FORWARD URL -->
+    <action path="/courseForward"
+        type="com.blackboard.gs.autosignon.struts.actions.AutoSignonAction"
+        scope="request"
+        parameter="courseForward">
+    </action>
+
+  </action-mappings>
+
+</struts-config>
