@@ -43,7 +43,7 @@ There was a problem attempting to single sign-on. <a href="/">You will be redire
 
 <script type="text/javascript">
 // http://stackoverflow.com/a/16541769
-var url = "/";
+var url = "/?audience=bblocal";
 var delay = "5000";
 
 window.onload = function ()
