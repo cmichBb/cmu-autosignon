@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<manifest>
+  <plugin>
+    <name value="plugin.title"/>
+    <handle value="autosignon"/>
+    <description value="plugin.descr"/>
+    <version value="1.2.0"/>
+    <default-locale value="en_US"/>
+    <webapp-type value="javaext"/>
+    <requires>
+      <bbversion value="9.1.8"/>
+    </requires>
+    <vendor>
+      <id value="bbgs"/>
+      <name value="Blackboard Global Services"/>
+      <url value="http://www.blackboard.com/"/>
+      <description value="Blackboard Global Services"/>
+    </vendor>
+
+    <!-- SETTINGS UI, DO NOT MODIFY -->
+    <http-actions>
+    	<config value="settings.do"/>
+    </http-actions>
+
+    <!-- No Application Definitions -->
+    <application-defs/>
+
+
+    <permissions>
+
+      <permission type="attribute" name="user.cardnumber" actions="get,set"/>
+      <permission type="attribute" name="user.authinfo" actions="get,set"/>
+      <permission type="attribute" name="user.personalinfo" actions="get,set"/>
+      <permission type="java.util.PropertyPermission" name="*" actions="read,write"/>
+      <permission type="java.lang.RuntimePermission" name="setContextClassLoader"/>
+      <permission type="java.io.FilePermission" name="&amp;lt;&amp;lt;ALL FILES&amp;gt;&amp;gt;" actions="read,write"/>
+      <permission type="blackboard.persist.PersistPermission" name="user" actions="create,modify"/>
+
+    </permissions>
+
+  </plugin>
+</manifest>
