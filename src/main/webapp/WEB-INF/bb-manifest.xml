@@ -3,8 +3,8 @@
   <plugin>
     <name value="plugin.title"/>
     <handle value="autosignon"/>
-    <description value="plugin.descr"/>
-    <version value="1.2.0"/>
+    <description value="CMU Customized Autosignon Building Block. Based on bbgs-autosignon 1.2 from Oscelot Projects site (see README.md in source for more details."/>
+    <version value="1.2.2"/>
     <default-locale value="en_US"/>
     <webapp-type value="javaext"/>
     <requires>
@@ -12,9 +12,9 @@
     </requires>
     <vendor>
       <id value="bbgs"/>
-      <name value="Blackboard Global Services"/>
-      <url value="http://www.blackboard.com/"/>
-      <description value="Blackboard Global Services"/>
+      <name value="Central Michigan University"/>
+      <url value="http://www.cmich.edu/"/>
+      <description value="Note: Vendor ID is set to bbgs to facilitate compatibility with ESS Redirect. This may change in the future (2014-06-10)"/>
     </vendor>
 
     <!-- SETTINGS UI, DO NOT MODIFY -->
